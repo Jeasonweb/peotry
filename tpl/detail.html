@@ -1,0 +1,43 @@
+<div class="navbar navbar-default navbar-fixed-top" style="background-color: transparent;height:50px">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#/category/{{peotry.pkind}}"><span class="glyphicon glyphicon-chevron-left">返回</span></a>
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#kf-menu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+    </div>
+</div>
+<div ng-controller="detailCtr" style="padding: 3%;" >
+    <div >
+    <h5 style="width:100%;font-weight: normal;text-indent: 1em; margin: 0;padding: 0.5em;">作者:{{peotry.pAuthor}}</h5>
+        <h3 style="width:100%;text-align:center;border-bottom: 1px  dashed #888;border-top:1px  dashed #888;margin: 0;padding: 0.5em;">{{peotry.pTitle}}</h3>
+        <div><pre style="display: block;background-color:transparent;word-wrap: break-word;white-space: pre-wrap;margin: 1em 0;border: 0;font-family: -moz-fixed;">{{peotry.pContent}}</pre></div>
+        <div><pre style="display: block;background-color:transparent;word-wrap: break-word;white-space: pre-wrap;margin: 1em 0;border: 0;font-family: -moz-fixed;">{{peotry.pComment}}</pre></div>
+    </div>
+    <!--<div><pre>{{pContent}}</pre></div>
+    <div><pre>{{pComment}}</pre></div>-->
+</div>
+<div class="navbar navbar-default navbar-fixed-bottom footer" style="background-color: transparent;height:50px">
+    <div class="container">
+        <ul class="navbar-footer-menu">
+            <li style="width: 33.33%;text-align: center;height:50px;line-height: 50px;">
+                <a href="#/start" class="btn-block">
+                    <span class="glyphicon glyphicon-home"></span>
+                </a>
+            </li>
+            <li style="width: 33.33%;text-align: center;height:50px;line-height: 50px;">
+                <a href="#/category/{{pKind}}" class="btn-block">
+                    <span class="glyphicon glyphicon-globe"></span>
+                </a>
+            </li>
+            <li style="width: 33.33%;text-align: center;height:50px;line-height: 50px;">
+                <a href="#/detail/{{pId}}" class="btn-block">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

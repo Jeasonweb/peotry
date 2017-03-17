@@ -1,0 +1,67 @@
+<!--/**
+		*文件用途说明:项目描述
+		*作者姓名：Jeason_zhang;
+		*联系方式：13641638693;Email:Jeason_zhang888@163.com
+		*制作日期：2016-8-22 21:20:44
+		**/
+		//大的模块的注释方式
+		//***************************
+		//功能描述
+		//***************************-->
+<div class="navbar navbar-default navbar-fixed-top" style="background-color: transparent">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#/start"><span class="glyphicon glyphicon-chevron-left">返回</span></a>
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#kf-menu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+    </div>
+</div>
+<div ng-controller="categoryCtr" style="padding: 3%;">
+    <!--新增关键词搜索-->
+    <div class="form-group has-feedback search">
+        <input type="text" ng-model="kw" class="form-control" placeholder="搜索诗词关键字">
+        <span class="form-control-feedback glyphicon glyphicon-search"></span>
+    </div>
+    <!--<div style="border-top: 0.2em double #555;border-bottom: 1px solid #555;padding: 0.5em;overflow: hidden">
+        <img ng-src="img/tangshi.jpg" title="这是一张唐诗图片" class="img-responsive" style="width:5em;float: left;margin-right: 5px;"/>
+       <b style="font-size: 1.2em">{{pkind}}:</b><p style="0.8em">{{cintro}}</p>
+    </div>-->
+    <h3 style="font-size: 1.4em">{{pkind}}({{totalRecord}})</h3>
+    <hr style="border:1px solid #555">
+    <ul>
+        <li ng-repeat="peotry in peotriList" style="width:100%;cursor: pointer;" ng-click="jump('/detail/{{peotry.pId}}')">
+            <a href="#/detail/{{peotry.pId}}">{{peotry.pTitle}}<span class="pull-right" >{{peotry.pAuthor}}</span></a>
+        </li>
+    </ul>
+    <button ng-show="hasMore"  class="btn btn-success btn-block" ng-click="loadMore()">加载更多</button>
+    <div  ng-hide="hasMore" class="alert alert-danger">
+        <span class="glyphicon glyphicon-alert"></span>
+        已经没有更多数据可供加载了！
+    </div>
+</div>
+<div class="navbar navbar-default navbar-fixed-bottom" style="background-color: transparent">
+    <div class="container">
+        <ul class="navbar-footer-menu">
+            <li style="width: 33.33%;text-align: center;height:50px;line-height: 50px;">
+                <a href="#/start" class="btn-block">
+                    <span class="glyphicon glyphicon-home"></span>
+                </a>
+            </li>
+            <li style="width: 33.33%;text-align: center;height:50px;line-height: 50px;">
+                <a href="#/category/{{cid}}" class="btn-block">
+                    <span class="glyphicon glyphicon-globe"></span>
+                </a>
+            </li>
+            <li style="width: 33.33%;text-align: center;height:50px;line-height: 50px;">
+                <a href="#/detail/5" class="btn-block">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+

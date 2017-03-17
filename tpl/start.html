@@ -1,0 +1,9 @@
+<div ng-controller="startCtr" class="start">
+    <ul>
+        <li ng-repeat="photo in musicList">
+            <a href="#/category/{{photo.cid}}"><img ng-src="{{photo.path}}" title="{{photo.title}}"/>
+            </a>
+        </li>
+    </ul>
+</div>
+

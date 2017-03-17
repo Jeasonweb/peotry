@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>===唐诗宋词三百首===</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="Jeason"/>
+    <meta name="revised" content="Jeason,"/>
+    <meta http-equiv="refresh" content=""/>
+    <!--<link rel="icon" href="img/favicon.ico"/>-->
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-controller="parentCtr">
+<!--/**
+		*文件用途说明:项目描述
+		*作者姓名：Jeason_zhang;
+		*联系方式：13641638693;Email:Jeason_zhang888@163.com
+		*制作日期：2016年7月29日20:45:33
+		**/
+		//大的模块的注释方式
+		//***************************
+		//唐诗宋词三百首
+		//***************************-->
+<!--
+    作者：Jeason_zhang888@163.com
+    时间：2016-07-30
+    描述：导航部分
+-->
+            <div class="container col-xs-12 col-sm-12 col-md-8 col-lg-6 col-md-offset-2 col-lg-offset-3" style="margin-top: 50px;margin-bottom: 50px;">
+                <header><h3 style="width: 100%;text-align: center;">唐诗宋词三百首</h3></header>
+                <section id="main" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div id="main_right" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-view>
+
+                    </div>
+                </section>
+            </div>
+            <audio id="audio" src="audio/lover.mp3" loop autoplay width="0" height="0">
+                Your browser does not support the element audio.
+            </audio>
+            <script src="js/jquery-1.11.3.js"></script>
+            <script src="js/angular.js"></script>
+            <script src="js/angular-route.js"></script>
+            <script src="js/angular-animate.js"></script>
+            <script src="js/JZMain.js"></script>
+</body>
+</html>
